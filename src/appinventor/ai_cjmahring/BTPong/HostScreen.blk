@@ -1,0 +1,776 @@
+<!DOCTYPE YACodeBlocks SYSTEM "support/save_format.dtd">
+<YACodeBlocks ya-version="75" lang-version="17">
+<Pages><Page page-name=" " page-color="237 245 211" page-width="1707" page-height="1600" page-drawer="My Definitions" >
+<PageBlocks>
+<Block id="1161" genus-name="Button-Click" >
+<Location><X>18</X><Y>845</Y></Location>
+<Label>ReadyButton.Click</Label>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" is-indented="yes" position-type="single" con-block-id="1165" ></BlockConnector>
+</Sockets>
+</Block>
+<BlockStub><StubParentName>ReadyButton.Enabled</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="1165" genus-name="componentSetter" >
+<Location><X>48</X><Y>878</Y></Location>
+<Label>ReadyButton.Enabled</Label>
+<BeforeBlockId>1161</BeforeBlockId>
+<AfterBlockId>1187</AfterBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="to" position-type="single" con-block-id="1167" ></BlockConnector>
+</Sockets>
+</Block>
+</BlockStub>
+<BlockStub><StubParentName>sendReady</StubParentName><StubParentGenus>define-void</StubParentGenus><Block id="1187" genus-name="caller-command" >
+<Location><X>48</X><Y>916</Y></Location>
+<Label>sendReady</Label>
+<BeforeBlockId>1165</BeforeBlockId>
+<AfterBlockId>1192</AfterBlockId>
+</Block>
+</BlockStub>
+<BlockStub><StubParentName>ReadyLabel.Text</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="1192" genus-name="componentSetter" >
+<Location><X>48</X><Y>944</Y></Location>
+<Label>ReadyLabel.Text</Label>
+<BeforeBlockId>1187</BeforeBlockId>
+<AfterBlockId>1328</AfterBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="to" position-type="single" con-block-id="1194" ></BlockConnector>
+</Sockets>
+</Block>
+</BlockStub>
+<Block id="1328" genus-name="if" >
+<Location><X>48</X><Y>982</Y></Location>
+<Label>if</Label>
+<BeforeBlockId>1192</BeforeBlockId>
+<Sockets num-sockets="2" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="test" position-type="single" con-block-id="1334" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="then-do" is-indented="yes" position-type="single" con-block-id="1330" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="1330" genus-name="if" >
+<Location><X>108</X><Y>1026</Y></Location>
+<Label>if</Label>
+<BeforeBlockId>1328</BeforeBlockId>
+<Sockets num-sockets="2" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="test" position-type="single" con-block-id="1332" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="then-do" is-indented="yes" position-type="single" con-block-id="1346" ></BlockConnector>
+</Sockets>
+</Block>
+<BlockStub><StubParentName>StartButton.Enabled</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="1346" genus-name="componentSetter" >
+<Location><X>168</X><Y>1070</Y></Location>
+<Label>StartButton.Enabled</Label>
+<BeforeBlockId>1330</BeforeBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="to" position-type="single" con-block-id="1348" ></BlockConnector>
+</Sockets>
+</Block>
+</BlockStub>
+<Block id="1348" genus-name="true" >
+<Location><X>380</X><Y>1073</Y></Location>
+<Label>true</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1346" ></BlockConnector></Plug>
+</Block>
+<Block id="1332" genus-name="yail-equal" >
+<Location><X>200</X><Y>1029</Y></Location>
+<Label>=</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1330" ></BlockConnector></Plug>
+<Sockets num-sockets="2" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="bottom" con-block-id="1340" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="bottom" con-block-id="1342" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="1342" genus-name="text" >
+<Location><X>460</X><Y>1036</Y></Location>
+<Label>Client Ready</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1332" ></BlockConnector></Plug>
+</Block>
+<BlockStub><StubParentName>ClientReadyLabel.Text</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="1340" genus-name="componentGetter" >
+<Location><X>210</X><Y>1036</Y></Location>
+<Label>ClientReadyLabel.Text</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1332" ></BlockConnector></Plug>
+</Block>
+</BlockStub>
+<Block id="1334" genus-name="yail-equal" >
+<Location><X>140</X><Y>985</Y></Location>
+<Label>=</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1328" ></BlockConnector></Plug>
+<Sockets num-sockets="2" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="bottom" con-block-id="1336" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="bottom" con-block-id="1338" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="1338" genus-name="text" >
+<Location><X>358</X><Y>992</Y></Location>
+<Label>Ready</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1334" ></BlockConnector></Plug>
+</Block>
+<BlockStub><StubParentName>ReadyLabel.Text</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="1336" genus-name="componentGetter" >
+<Location><X>150</X><Y>992</Y></Location>
+<Label>ReadyLabel.Text</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1334" ></BlockConnector></Plug>
+</Block>
+</BlockStub>
+<Block id="1194" genus-name="text" >
+<Location><X>232</X><Y>947</Y></Location>
+<Label>Ready</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1192" ></BlockConnector></Plug>
+</Block>
+<Block id="1167" genus-name="false" >
+<Location><X>268</X><Y>881</Y></Location>
+<Label>false</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1165" ></BlockConnector></Plug>
+</Block>
+<Block id="1352" genus-name="if" >
+<Location><X>851</X><Y>766</Y></Location>
+<Label>if</Label>
+<BeforeBlockId>1283</BeforeBlockId>
+<Sockets num-sockets="2" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="test" position-type="single" con-block-id="1354" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="then-do" is-indented="yes" position-type="single" con-block-id="1360" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="1360" genus-name="if" >
+<Location><X>911</X><Y>810</Y></Location>
+<Label>if</Label>
+<BeforeBlockId>1352</BeforeBlockId>
+<Sockets num-sockets="2" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="test" position-type="single" con-block-id="1362" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="then-do" is-indented="yes" position-type="single" con-block-id="1368" ></BlockConnector>
+</Sockets>
+</Block>
+<BlockStub><StubParentName>StartButton.Enabled</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="1368" genus-name="componentSetter" >
+<Location><X>971</X><Y>854</Y></Location>
+<Label>StartButton.Enabled</Label>
+<BeforeBlockId>1360</BeforeBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="to" position-type="single" con-block-id="1370" ></BlockConnector>
+</Sockets>
+</Block>
+</BlockStub>
+<Block id="1370" genus-name="true" >
+<Location><X>1183</X><Y>857</Y></Location>
+<Label>true</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1368" ></BlockConnector></Plug>
+</Block>
+<Block id="1362" genus-name="yail-equal" >
+<Location><X>1003</X><Y>813</Y></Location>
+<Label>=</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1360" ></BlockConnector></Plug>
+<Sockets num-sockets="2" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="bottom" con-block-id="1364" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="bottom" con-block-id="1366" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="1366" genus-name="text" >
+<Location><X>1263</X><Y>820</Y></Location>
+<Label>Client Ready</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1362" ></BlockConnector></Plug>
+</Block>
+<BlockStub><StubParentName>ClientReadyLabel.Text</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="1364" genus-name="componentGetter" >
+<Location><X>1013</X><Y>820</Y></Location>
+<Label>ClientReadyLabel.Text</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1362" ></BlockConnector></Plug>
+</Block>
+</BlockStub>
+<Block id="1354" genus-name="yail-equal" >
+<Location><X>943</X><Y>769</Y></Location>
+<Label>=</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1352" ></BlockConnector></Plug>
+<Sockets num-sockets="2" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="bottom" con-block-id="1356" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="bottom" con-block-id="1358" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="1358" genus-name="text" >
+<Location><X>1161</X><Y>776</Y></Location>
+<Label>Ready</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1354" ></BlockConnector></Plug>
+</Block>
+<BlockStub><StubParentName>ReadyLabel.Text</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="1356" genus-name="componentGetter" >
+<Location><X>953</X><Y>776</Y></Location>
+<Label>ReadyLabel.Text</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1354" ></BlockConnector></Plug>
+</Block>
+</BlockStub>
+<Block id="1257" genus-name="define-void" >
+<Location><X>756</X><Y>595</Y></Location>
+<Label>handleLobbyCommand</Label>
+<Sockets num-sockets="3" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="arg" is-expandable="yes" position-type="single" con-block-id="1263" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="arg" is-expandable="yes" position-type="single" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" is-indented="yes" position-type="single" con-block-id="1271" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="1271" genus-name="if" >
+<Location><X>791</X><Y>652</Y></Location>
+<Label>if</Label>
+<BeforeBlockId>1257</BeforeBlockId>
+<Sockets num-sockets="2" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="test" position-type="single" con-block-id="1279" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="then-do" is-indented="yes" position-type="single" con-block-id="1283" ></BlockConnector>
+</Sockets>
+</Block>
+<BlockStub><StubParentName>ClientReadyLabel.Text</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="1283" genus-name="componentSetter" >
+<Location><X>851</X><Y>728</Y></Location>
+<Label>ClientReadyLabel.Text</Label>
+<BeforeBlockId>1271</BeforeBlockId>
+<AfterBlockId>1352</AfterBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="to" position-type="single" con-block-id="1285" ></BlockConnector>
+</Sockets>
+</Block>
+</BlockStub>
+<Block id="1285" genus-name="text" >
+<Location><X>1075</X><Y>731</Y></Location>
+<Label>Client Ready</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1283" ></BlockConnector></Plug>
+</Block>
+<Block id="1279" genus-name="yail-equal" >
+<Location><X>875</X><Y>655</Y></Location>
+<Label>=</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1271" ></BlockConnector></Plug>
+<Sockets num-sockets="2" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="bottom" con-block-id="1273" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="bottom" con-block-id="1281" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="1281" genus-name="text" >
+<Location><X>1241</X><Y>690</Y></Location>
+<Label>ready</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1279" ></BlockConnector></Plug>
+</Block>
+<Block id="1273" genus-name="get-list-item" >
+<Location><X>885</X><Y>662</Y></Location>
+<Label>select list item</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1279" ></BlockConnector></Plug>
+<Sockets num-sockets="2" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="list" position-type="single" con-block-id="1275" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="index" position-type="single" con-block-id="1277" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="1277" genus-name="number" >
+<Location><X>1079</X><Y>690</Y></Location>
+<Label>2</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1273" ></BlockConnector></Plug>
+</Block>
+<BlockStub><StubParentName>params</StubParentName><StubParentGenus>argument</StubParentGenus><Block id="1275" genus-name="getter" >
+<Location><X>1079</X><Y>662</Y></Location>
+<Label>params</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1273" ></BlockConnector></Plug>
+</Block>
+</BlockStub>
+<Block id="1263" genus-name="argument" >
+<Location><X>984</X><Y>595</Y></Location>
+<Label>params</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1257" ></BlockConnector></Plug>
+</Block>
+<Block id="1201" genus-name="Clock-Timer" >
+<Location><X>517</X><Y>225</Y></Location>
+<Label>ReadTimer.Timer</Label>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" is-indented="yes" position-type="single" con-block-id="833" ></BlockConnector>
+</Sockets>
+</Block>
+<BlockStub><StubParentName>StatusLabel.Text</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="833" genus-name="componentSetter" >
+<Location><X>547</X><Y>258</Y></Location>
+<Label>StatusLabel.Text</Label>
+<BeforeBlockId>1201</BeforeBlockId>
+<AfterBlockId>1139</AfterBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="to" position-type="single" con-block-id="835" ></BlockConnector>
+</Sockets>
+</Block>
+</BlockStub>
+<BlockStub><StubParentName>Readcount</StubParentName><StubParentGenus>def</StubParentGenus><Block id="1139" genus-name="setterGlobal" >
+<Location><X>547</X><Y>304</Y></Location>
+<Label>Readcount</Label>
+<BeforeBlockId>833</BeforeBlockId>
+<AfterBlockId>1191</AfterBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="to" position-type="single" con-block-id="1143" ></BlockConnector>
+</Sockets>
+</Block>
+</BlockStub>
+<Block id="1191" genus-name="ifelse" >
+<Location><X>547</X><Y>350</Y></Location>
+<Label>ifelse</Label>
+<BeforeBlockId>1139</BeforeBlockId>
+<Sockets num-sockets="3" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="test" position-type="single" con-block-id="1199" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="then-do" is-indented="yes" position-type="single" con-block-id="1221" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="else-do" is-indented="yes" position-type="single" ></BlockConnector>
+</Sockets>
+</Block>
+<BlockStub><StubParentName>bytes</StubParentName><StubParentGenus>def</StubParentGenus><Block id="1221" genus-name="setterGlobal" >
+<Location><X>607</X><Y>386</Y></Location>
+<Label>bytes</Label>
+<BeforeBlockId>1191</BeforeBlockId>
+<AfterBlockId>1193</AfterBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="to" position-type="single" con-block-id="1189" ></BlockConnector>
+</Sockets>
+</Block>
+</BlockStub>
+<Block id="1193" genus-name="ifelse" >
+<Location><X>607</X><Y>424</Y></Location>
+<Label>ifelse</Label>
+<BeforeBlockId>1221</BeforeBlockId>
+<Sockets num-sockets="3" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="test" position-type="single" con-block-id="1195" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="then-do" is-indented="yes" position-type="single" con-block-id="1206" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="else-do" is-indented="yes" position-type="single" ></BlockConnector>
+</Sockets>
+</Block>
+<BlockStub><StubParentName>recvText</StubParentName><StubParentGenus>def</StubParentGenus><Block id="1206" genus-name="setterGlobal" >
+<Location><X>667</X><Y>468</Y></Location>
+<Label>recvText</Label>
+<BeforeBlockId>1193</BeforeBlockId>
+<AfterBlockId>1205</AfterBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="to" position-type="single" con-block-id="1209" ></BlockConnector>
+</Sockets>
+</Block>
+</BlockStub>
+<BlockStub><StubParentName>StatusLabel.Text</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="1205" genus-name="componentSetter" >
+<Location><X>667</X><Y>510</Y></Location>
+<Label>StatusLabel.Text</Label>
+<BeforeBlockId>1206</BeforeBlockId>
+<AfterBlockId>1224</AfterBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="to" position-type="single" con-block-id="1208" ></BlockConnector>
+</Sockets>
+</Block>
+</BlockStub>
+<BlockStub><StubParentName>parseRecvText</StubParentName><StubParentGenus>define-void</StubParentGenus><Block id="1224" genus-name="caller-command" >
+<Location><X>667</X><Y>548</Y></Location>
+<Label>parseRecvText</Label>
+<BeforeBlockId>1205</BeforeBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="cmd" position-type="single" con-block-id="1226" ></BlockConnector>
+</Sockets>
+</Block>
+</BlockStub>
+<BlockStub><StubParentName>recvText</StubParentName><StubParentGenus>def</StubParentGenus><Block id="1226" genus-name="getterGlobal" >
+<Location><X>847</X><Y>551</Y></Location>
+<Label>recvText</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1224" ></BlockConnector></Plug>
+</Block>
+</BlockStub>
+<BlockStub><StubParentName>recvText</StubParentName><StubParentGenus>def</StubParentGenus><Block id="1208" genus-name="getterGlobal" >
+<Location><X>853</X><Y>513</Y></Location>
+<Label>recvText</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1205" ></BlockConnector></Plug>
+</Block>
+</BlockStub>
+<Block id="1209" genus-name="BluetoothServer-ReceiveText" >
+<Location><X>823</X><Y>471</Y></Location>
+<Label>BluetoothServer.ReceiveText</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1206" ></BlockConnector></Plug>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="numberOfBytes" position-type="single" con-block-id="1225" ></BlockConnector>
+</Sockets>
+</Block>
+<BlockStub><StubParentName>bytes</StubParentName><StubParentGenus>def</StubParentGenus><Block id="1225" genus-name="getterGlobal" >
+<Location><X>1175</X><Y>471</Y></Location>
+<Label>bytes</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1209" ></BlockConnector></Plug>
+</Block>
+</BlockStub>
+<Block id="1195" genus-name="greaterthan" >
+<Location><X>721</X><Y>427</Y></Location>
+<Label>&gt;</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1193" ></BlockConnector></Plug>
+<Sockets num-sockets="2" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="bottom" con-block-id="1223" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="bottom" con-block-id="1197" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="1197" genus-name="number" >
+<Location><X>881</X><Y>434</Y></Location>
+<Label>0</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1195" ></BlockConnector></Plug>
+</Block>
+<BlockStub><StubParentName>bytes</StubParentName><StubParentGenus>def</StubParentGenus><Block id="1223" genus-name="getterGlobal" >
+<Location><X>731</X><Y>434</Y></Location>
+<Label>bytes</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1195" ></BlockConnector></Plug>
+</Block>
+</BlockStub>
+<Block id="1189" genus-name="BluetoothServer-BytesAvailableToReceive" >
+<Location><X>743</X><Y>389</Y></Location>
+<Label>BluetoothServer.BytesAvailableToReceive</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1221" ></BlockConnector></Plug>
+</Block>
+<BlockStub><StubParentName>BluetoothServer.IsConnected</StubParentName><StubParentGenus>read-only-property</StubParentGenus><Block id="1199" genus-name="componentGetter" >
+<Location><X>661</X><Y>353</Y></Location>
+<Label>BluetoothServer.IsConnected</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1191" ></BlockConnector></Plug>
+</Block>
+</BlockStub>
+<Block id="1143" genus-name="number-plus" >
+<Location><X>719</X><Y>307</Y></Location>
+<Label>+</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1139" ></BlockConnector></Plug>
+<Sockets num-sockets="2" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="bottom" con-block-id="1145" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="bottom" con-block-id="1141" ></BlockConnector>
+</Sockets>
+</Block>
+<BlockStub><StubParentName>Readcount</StubParentName><StubParentGenus>def</StubParentGenus><Block id="1141" genus-name="getterGlobal" >
+<Location><X>863</X><Y>314</Y></Location>
+<Label>Readcount</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1143" ></BlockConnector></Plug>
+</Block>
+</BlockStub>
+<Block id="1145" genus-name="number" >
+<Location><X>729</X><Y>314</Y></Location>
+<Label>1</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1143" ></BlockConnector></Plug>
+</Block>
+<Block id="835" genus-name="string-append" >
+<Location><X>733</X><Y>261</Y></Location>
+<Label>join</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="833" ></BlockConnector></Plug>
+<Sockets num-sockets="2" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="bottom" con-block-id="837" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="bottom" con-block-id="1137" ></BlockConnector>
+</Sockets>
+</Block>
+<BlockStub><StubParentName>Readcount</StubParentName><StubParentGenus>def</StubParentGenus><Block id="1137" genus-name="getterGlobal" >
+<Location><X>903</X><Y>268</Y></Location>
+<Label>Readcount</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="835" ></BlockConnector></Plug>
+</Block>
+</BlockStub>
+<Block id="837" genus-name="text" >
+<Location><X>743</X><Y>268</Y></Location>
+<Label>read </Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="835" ></BlockConnector></Plug>
+</Block>
+<Block id="1214" genus-name="define-void" >
+<Location><X>8</X><Y>566</Y></Location>
+<Label>parseRecvText</Label>
+<Sockets num-sockets="3" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="arg" is-expandable="yes" position-type="single" con-block-id="1220" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="arg" is-expandable="yes" position-type="single" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" is-indented="yes" position-type="single" con-block-id="1253" ></BlockConnector>
+</Sockets>
+</Block>
+<BlockStub><StubParentName>cmdParams</StubParentName><StubParentGenus>def</StubParentGenus><Block id="1253" genus-name="setterGlobal" >
+<Location><X>43</X><Y>623</Y></Location>
+<Label>cmdParams</Label>
+<BeforeBlockId>1214</BeforeBlockId>
+<AfterBlockId>1215</AfterBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="to" position-type="single" con-block-id="1217" ></BlockConnector>
+</Sockets>
+</Block>
+</BlockStub>
+<Block id="1215" genus-name="if" >
+<Location><X>43</X><Y>693</Y></Location>
+<Label>if</Label>
+<BeforeBlockId>1253</BeforeBlockId>
+<Sockets num-sockets="2" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="test" position-type="single" con-block-id="1237" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="then-do" is-indented="yes" position-type="single" con-block-id="1267" ></BlockConnector>
+</Sockets>
+</Block>
+<BlockStub><StubParentName>handleLobbyCommand</StubParentName><StubParentGenus>define-void</StubParentGenus><Block id="1267" genus-name="caller-command" >
+<Location><X>103</X><Y>769</Y></Location>
+<Label>handleLobbyCommand</Label>
+<BeforeBlockId>1215</BeforeBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="params" position-type="single" con-block-id="1269" ></BlockConnector>
+</Sockets>
+</Block>
+</BlockStub>
+<BlockStub><StubParentName>cmdParams</StubParentName><StubParentGenus>def</StubParentGenus><Block id="1269" genus-name="getterGlobal" >
+<Location><X>361</X><Y>772</Y></Location>
+<Label>cmdParams</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1267" ></BlockConnector></Plug>
+</Block>
+</BlockStub>
+<Block id="1237" genus-name="yail-equal" >
+<Location><X>127</X><Y>696</Y></Location>
+<Label>=</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1215" ></BlockConnector></Plug>
+<Sockets num-sockets="2" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="bottom" con-block-id="1227" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="bottom" con-block-id="1239" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="1239" genus-name="text" >
+<Location><X>523</X><Y>731</Y></Location>
+<Label>lob</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1237" ></BlockConnector></Plug>
+</Block>
+<Block id="1227" genus-name="get-list-item" >
+<Location><X>137</X><Y>703</Y></Location>
+<Label>select list item</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1237" ></BlockConnector></Plug>
+<Sockets num-sockets="2" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="list" position-type="single" con-block-id="1255" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="index" position-type="single" con-block-id="1229" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="1229" genus-name="number" >
+<Location><X>331</X><Y>731</Y></Location>
+<Label>1</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1227" ></BlockConnector></Plug>
+</Block>
+<BlockStub><StubParentName>cmdParams</StubParentName><StubParentGenus>def</StubParentGenus><Block id="1255" genus-name="getterGlobal" >
+<Location><X>331</X><Y>703</Y></Location>
+<Label>cmdParams</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1227" ></BlockConnector></Plug>
+</Block>
+</BlockStub>
+<Block id="1217" genus-name="string-split" >
+<Location><X>221</X><Y>626</Y></Location>
+<Label>split</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1253" ></BlockConnector></Plug>
+<Sockets num-sockets="2" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="text" position-type="single" con-block-id="1233" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="at" position-type="single" con-block-id="1235" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="1235" genus-name="text" >
+<Location><X>335</X><Y>654</Y></Location>
+<Label>|</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1217" ></BlockConnector></Plug>
+</Block>
+<BlockStub><StubParentName>cmd</StubParentName><StubParentGenus>argument</StubParentGenus><Block id="1233" genus-name="getter" >
+<Location><X>335</X><Y>626</Y></Location>
+<Label>cmd</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1217" ></BlockConnector></Plug>
+</Block>
+</BlockStub>
+<Block id="1220" genus-name="argument" >
+<Location><X>178</X><Y>566</Y></Location>
+<Label>cmd</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1214" ></BlockConnector></Plug>
+</Block>
+<Block id="1241" genus-name="def" >
+<Location><X>10</X><Y>481</Y></Location>
+<Label>cmdParams</Label>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="as" position-type="single" con-block-id="1249" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="1249" genus-name="make-list" >
+<Location><X>168</X><Y>481</Y></Location>
+<Label>make a list</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1241" ></BlockConnector></Plug>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="item" is-expandable="yes" is-indented="yes" position-type="single" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="1196" genus-name="def" >
+<Location><X>538</X><Y>112</Y></Location>
+<Label>recvText</Label>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="as" position-type="single" con-block-id="1204" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="1204" genus-name="text" >
+<Location><X>674</X><Y>112</Y></Location>
+<Label></Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1196" ></BlockConnector></Plug>
+</Block>
+<Block id="1211" genus-name="def" >
+<Location><X>290</X><Y>102</Y></Location>
+<Label>bytes</Label>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="as" position-type="single" con-block-id="1219" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="1219" genus-name="number" >
+<Location><X>408</X><Y>102</Y></Location>
+<Label>0</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1211" ></BlockConnector></Plug>
+</Block>
+<Block id="1177" genus-name="define-void" >
+<Location><X>770</X><Y>32</Y></Location>
+<Label>sendReady</Label>
+<Sockets num-sockets="2" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="arg" is-expandable="yes" position-type="single" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" is-indented="yes" position-type="single" con-block-id="1183" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="1183" genus-name="BluetoothServer-SendText" >
+<Location><X>805</X><Y>61</Y></Location>
+<Label>BluetoothServer.SendText</Label>
+<BeforeBlockId>1177</BeforeBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="text" position-type="single" con-block-id="1185" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="1185" genus-name="text" >
+<Location><X>1069</X><Y>64</Y></Location>
+<Label>lob|ready</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1183" ></BlockConnector></Plug>
+</Block>
+<Block id="1159" genus-name="true" >
+<Location><X>271</X><Y>420</Y></Location>
+<Label>true</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1157" ></BlockConnector></Plug>
+</Block>
+<BlockStub><StubParentName>ReadyButton.Enabled</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="1157" genus-name="componentSetter" >
+<Location><X>51</X><Y>417</Y></Location>
+<Label>ReadyButton.Enabled</Label>
+<BeforeBlockId>829</BeforeBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="to" position-type="single" con-block-id="1159" ></BlockConnector>
+</Sockets>
+</Block>
+</BlockStub>
+<Block id="1147" genus-name="def" >
+<Location><X>408</X><Y>65</Y></Location>
+<Label>ready</Label>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="as" position-type="single" con-block-id="1155" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="1155" genus-name="false" >
+<Location><X>526</X><Y>65</Y></Location>
+<Label>false</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1147" ></BlockConnector></Plug>
+</Block>
+<Block id="1125" genus-name="def" >
+<Location><X>446</X><Y>21</Y></Location>
+<Label>Readcount</Label>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="as" position-type="single" con-block-id="1135" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="1135" genus-name="number" >
+<Location><X>600</X><Y>21</Y></Location>
+<Label>0</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1125" ></BlockConnector></Plug>
+</Block>
+<Block id="831" genus-name="true" >
+<Location><X>293</X><Y>382</Y></Location>
+<Label>true</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="829" ></BlockConnector></Plug>
+</Block>
+<BlockStub><StubParentName>ReadTimer.TimerEnabled</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="829" genus-name="componentSetter" >
+<Location><X>51</X><Y>379</Y></Location>
+<Label>ReadTimer.TimerEnabled</Label>
+<BeforeBlockId>686</BeforeBlockId>
+<AfterBlockId>1157</AfterBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="to" position-type="single" con-block-id="831" ></BlockConnector>
+</Sockets>
+</Block>
+</BlockStub>
+<Block id="679" genus-name="text" >
+<Location><X>193</X><Y>15</Y></Location>
+<Label>Bluetooth is disabled on your device</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="671" ></BlockConnector></Plug>
+</Block>
+<Block id="671" genus-name="def" >
+<Location><X>15</X><Y>15</Y></Location>
+<Label>langBTDisbled</Label>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="as" position-type="single" con-block-id="679" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="675" genus-name="def" >
+<Location><X>17</X><Y>56</Y></Location>
+<Label>langBTConnected</Label>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="as" position-type="single" con-block-id="684" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="684" genus-name="text" >
+<Location><X>219</X><Y>56</Y></Location>
+<Label>Connection established\\n</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="675" ></BlockConnector></Plug>
+</Block>
+<BlockStub><StubParentName>BluetoothServer.Available</StubParentName><StubParentGenus>read-only-property</StubParentGenus><Block id="663" genus-name="componentGetter" >
+<Location><X>164</X><Y>153</Y></Location>
+<Label>BluetoothServer.Available</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="667" ></BlockConnector></Plug>
+</Block>
+</BlockStub>
+<Block id="670" genus-name="text" >
+<Location><X>486</X><Y>189</Y></Location>
+<Label>samoht</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="674" ></BlockConnector></Plug>
+</Block>
+<Block id="674" genus-name="BluetoothServer-AcceptConnection" >
+<Location><X>110</X><Y>186</Y></Location>
+<Label>BluetoothServer.AcceptConnection</Label>
+<BeforeBlockId>667</BeforeBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="serviceName" position-type="single" con-block-id="670" ></BlockConnector>
+</Sockets>
+</Block>
+<BlockStub><StubParentName>langBTDisbled</StubParentName><StubParentGenus>def</StubParentGenus><Block id="683" genus-name="getterGlobal" >
+<Location><X>295</X><Y>238</Y></Location>
+<Label>langBTDisbled</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="669" ></BlockConnector></Plug>
+</Block>
+</BlockStub>
+<BlockStub><StubParentName>StatusLabel.Text</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="669" genus-name="componentSetter" >
+<Location><X>109</X><Y>235</Y></Location>
+<Label>StatusLabel.Text</Label>
+<BeforeBlockId>667</BeforeBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="to" position-type="single" con-block-id="683" ></BlockConnector>
+</Sockets>
+</Block>
+</BlockStub>
+<Block id="667" genus-name="ifelse" >
+<Location><X>50</X><Y>150</Y></Location>
+<Label>ifelse</Label>
+<BeforeBlockId>659</BeforeBlockId>
+<Sockets num-sockets="3" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="test" position-type="single" con-block-id="663" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="then-do" is-indented="yes" position-type="single" con-block-id="674" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="else-do" is-indented="yes" position-type="single" con-block-id="669" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="659" genus-name="Screen-Initialize" >
+<Location><X>20</X><Y>117</Y></Location>
+<Label>HostScreen.Initialize</Label>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" is-indented="yes" position-type="single" con-block-id="667" ></BlockConnector>
+</Sockets>
+</Block>
+<BlockStub><StubParentName>langBTConnected</StubParentName><StubParentGenus>def</StubParentGenus><Block id="690" genus-name="getterGlobal" >
+<Location><X>237</X><Y>344</Y></Location>
+<Label>langBTConnected</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="686" ></BlockConnector></Plug>
+</Block>
+</BlockStub>
+<BlockStub><StubParentName>StatusLabel.Text</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="686" genus-name="componentSetter" >
+<Location><X>51</X><Y>341</Y></Location>
+<Label>StatusLabel.Text</Label>
+<BeforeBlockId>668</BeforeBlockId>
+<AfterBlockId>829</AfterBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="to" position-type="single" con-block-id="690" ></BlockConnector>
+</Sockets>
+</Block>
+</BlockStub>
+<Block id="668" genus-name="BluetoothServer-ConnectionAccepted" >
+<Location><X>21</X><Y>308</Y></Location>
+<Label>BluetoothServer.ConnectionAccepted</Label>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" is-indented="yes" position-type="single" con-block-id="686" ></BlockConnector>
+</Sockets>
+</Block>
+</PageBlocks>
+</Page>
+
+</Pages><YoungAndroidMaps><YoungAndroidUuidMap>
+<YoungAndroidUuidEntry uuid="892900365" component-id="ClientReadyLabel" component-genus="Label" component-version="2" ></YoungAndroidUuidEntry>
+<YoungAndroidUuidEntry uuid="318045607" component-id="HorizontalArrangement1" component-genus="HorizontalArrangement" component-version="2" ></YoungAndroidUuidEntry>
+<YoungAndroidUuidEntry uuid="-2126522348" component-id="ReadTimer" component-genus="Clock" component-version="1" ></YoungAndroidUuidEntry>
+<YoungAndroidUuidEntry uuid="0" component-id="HostScreen" component-genus="Form" component-version="0" ></YoungAndroidUuidEntry>
+<YoungAndroidUuidEntry uuid="-2111509238" component-id="StatusLabel" component-genus="Label" component-version="2" ></YoungAndroidUuidEntry>
+<YoungAndroidUuidEntry uuid="1382560112" component-id="ReadyLabel" component-genus="Label" component-version="2" ></YoungAndroidUuidEntry>
+<YoungAndroidUuidEntry uuid="1259938886" component-id="BluetoothServer" component-genus="BluetoothServer" component-version="5" ></YoungAndroidUuidEntry>
+<YoungAndroidUuidEntry uuid="-192597000" component-id="ReadyButton" component-genus="Button" component-version="5" ></YoungAndroidUuidEntry>
+<YoungAndroidUuidEntry uuid="-75926420" component-id="StartButton" component-genus="Button" component-version="5" ></YoungAndroidUuidEntry>
+</YoungAndroidUuidMap>
+</YoungAndroidMaps>
+</YACodeBlocks>

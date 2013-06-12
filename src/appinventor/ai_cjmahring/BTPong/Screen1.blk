@@ -1,0 +1,54 @@
+<!DOCTYPE YACodeBlocks SYSTEM "support/save_format.dtd">
+<YACodeBlocks ya-version="75" lang-version="17">
+<Pages><Page page-name=" " page-color="237 245 211" page-width="1366" page-height="1600" page-drawer="My Definitions" >
+<PageBlocks>
+<Block id="637" genus-name="open-another-screen" >
+<Location><X>103</X><Y>63</Y></Location>
+<Label>open another screen</Label>
+<BeforeBlockId>633</BeforeBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="screenName" position-type="single" con-block-id="639" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="639" genus-name="text" >
+<Location><X>377</X><Y>66</Y></Location>
+<Label>JoinScreen</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="637" ></BlockConnector></Plug>
+</Block>
+<Block id="647" genus-name="open-another-screen" >
+<Location><X>108</X><Y>160</Y></Location>
+<Label>open another screen</Label>
+<BeforeBlockId>641</BeforeBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="screenName" position-type="single" con-block-id="649" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="649" genus-name="text" >
+<Location><X>382</X><Y>163</Y></Location>
+<Label>HostScreen</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="647" ></BlockConnector></Plug>
+</Block>
+<Block id="641" genus-name="Button-Click" >
+<Location><X>78</X><Y>127</Y></Location>
+<Label>HostButton.Click</Label>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" is-indented="yes" position-type="single" con-block-id="647" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="633" genus-name="Button-Click" >
+<Location><X>73</X><Y>30</Y></Location>
+<Label>JoinButton.Click</Label>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" is-indented="yes" position-type="single" con-block-id="637" ></BlockConnector>
+</Sockets>
+</Block>
+</PageBlocks>
+</Page>
+
+</Pages><YoungAndroidMaps><YoungAndroidUuidMap>
+<YoungAndroidUuidEntry uuid="-179017162" component-id="HostButton" component-genus="Button" component-version="5" ></YoungAndroidUuidEntry>
+<YoungAndroidUuidEntry uuid="0" component-id="Screen1" component-genus="Form" component-version="0" ></YoungAndroidUuidEntry>
+<YoungAndroidUuidEntry uuid="-928548375" component-id="JoinButton" component-genus="Button" component-version="5" ></YoungAndroidUuidEntry>
+</YoungAndroidUuidMap>
+</YoungAndroidMaps>
+</YACodeBlocks>
